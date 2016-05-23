@@ -8,15 +8,14 @@
 geom_label_repel(mapping = NULL, data = NULL, stat = "identity",
   parse = FALSE, ..., box.padding = unit(0.25, "lines"),
   label.padding = unit(0.25, "lines"), point.padding = unit(1e-06, "lines"),
-  label.r = unit(0.15, "lines"), label.size = 0.25,
-  segment.color = "#666666", segment.size = 0.5, arrow = NULL,
-  force = 1, max.iter = 2000, na.rm = FALSE, show.legend = NA,
-  inherit.aes = TRUE)
+  label.r = unit(0.15, "lines"), label.size = 0.25, segment.size = 0.5,
+  segment.alpha = 0.5, arrow = NULL, force = 1, max.iter = 2000,
+  na.rm = FALSE, show.legend = NA, inherit.aes = TRUE)
 
 geom_text_repel(mapping = NULL, data = NULL, stat = "identity",
   parse = FALSE, ..., box.padding = unit(0.25, "lines"),
-  point.padding = unit(1e-06, "lines"), segment.color = "#666666",
-  segment.size = 0.5, arrow = NULL, force = 1, max.iter = 2000,
+  point.padding = unit(1e-06, "lines"), segment.size = 0.5,
+  segment.alpha = 0.5, arrow = NULL, force = 1, max.iter = 2000,
   nudge_x = 0, nudge_y = 0, na.rm = FALSE, show.legend = NA,
   inherit.aes = TRUE)
 }
@@ -59,10 +58,10 @@ displayed as described in ?plotmath}
 
 \item{label.size}{Size of label border, in mm.}
 
-\item{segment.color}{Color of the line segment connecting the data point to
-the text labe. Defaults to \code{#666666}.}
+\item{segment.size}{Width of line segment connecting the data point to
+the text label, in mm.}
 
-\item{segment.size}{Width of segment, in mm.}
+\item{segment.alpha}{Transparency of the segment, in \code{[0,1]}. Makes segments half transparent by default.}
 
 \item{arrow}{specification for arrow heads, as created by \code{\link[grid]{arrow}}}
 
